@@ -15,8 +15,7 @@ const authMiddleware = function (req, res, next) {
 };
 const validMiddleware = function (req, res, next) {
   console.log("validating");
-  res.send();
-  next();
+  res.send("Not valid user");
 };
 
 app.use(loggingMiddleware);
