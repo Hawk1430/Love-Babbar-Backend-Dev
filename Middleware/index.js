@@ -2,6 +2,10 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
+// loading routes specific middleware
+const userRoutes = require("./routes/route");
+app.use("/api", userRoutes);
+
 //inbuilt middleware
 app.use(express.json());
 
